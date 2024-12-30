@@ -1,7 +1,7 @@
 .globalStyleProvider {
-  display: flex;
+  display: grid;
+  grid-template-columns: 15rem 100%;
   padding: 2.5rem;
   gap: 2.5rem;
   height: 100%;
-  
 }
