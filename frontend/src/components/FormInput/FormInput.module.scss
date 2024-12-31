@@ -1,0 +1,28 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+
+  > .label {
+    font-weight: bold;
+  }
+
+  > .label.error {
+    color: red;
+  }
+
+  > .input {
+    padding: 0.5rem 1rem;
+    // border: 1px solid red;
+    border-radius: 0.25rem;
+  }
+
+  > .input:focus-visible {
+    outline: 1px solid #2563eb;
+  }
+  > .input.error {
+    background-color: rgb(254 242 242);
+    outline-color: #dc2626;
+  }
+}
