@@ -1,6 +1,6 @@
 import { Tasks } from '@/components/Tasks/Tasks';
 
-const ProtectedRoot = () => {
+const Dashboard = () => {
   return (
     <main>
       <Tasks />
@@ -8,4 +8,4 @@ const ProtectedRoot = () => {
   );
 };
 
-export default ProtectedRoot;
+export default Dashboard;

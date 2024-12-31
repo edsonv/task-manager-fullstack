@@ -1,7 +1,12 @@
+import GlobalStyleProvider from '@/components/ProtectedStyleProvider/ProtectedStyleProvider';
+import '@/styles/globals.scss';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
-import '@/styles/globals.scss';
-import GlobalStyleProvider from '@/components/GlobalStyleProvider/GlobalStyleProvider';
+import { ReactNode } from 'react';
+
+type Props = {
+  children: ReactNode;
+};
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -18,11 +23,7 @@ export const metadata: Metadata = {
   description: 'Next.js, React, MongoDB Tutorial',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const RootLayout = ({ children }: Props) => {
   return (
     <html lang='en'>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
@@ -30,4 +31,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

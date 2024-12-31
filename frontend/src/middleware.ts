@@ -1,26 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const protectedRoutes = ['/'];
-const publicRoutes = ['/login'];
-
 const middleware = (req: NextRequest) => {
-  const { pathname } = req.nextUrl;
+  const isAuthenticated = true;
 
-  console.log(pathname);
-
-  const isProtectedRoute = protectedRoutes.includes(pathname);
-  const isPublicRoute = publicRoutes.includes(pathname);
-  const session = true;
-
-  if (isProtectedRoute && !session) {
-    return NextResponse.redirect(new URL('/', req.nextUrl));
-  }
-
-  if (isPublicRoute && session) {
-    return NextResponse.redirect(new URL('/login', req.nextUrl));
+  if (!isAuthenticated) {
+    return NextResponse.redirect(new URL('/login', req.url));
   }
 
   return NextResponse.next();
+};
+
+export const config = {
+  matcher: '/',
 };
 
 export default middleware;
