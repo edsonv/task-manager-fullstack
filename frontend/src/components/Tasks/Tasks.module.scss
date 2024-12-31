@@ -1,0 +1,11 @@
+.tasksContainer {
+  width: 100%;
+  background-color: #212121;
+  border: 2px solid rgba(249, 249, 249, 0.08);
+  border-radius: 1rem;
+  padding: 2rem;
+  overflow-y: auto;
+  height: 100%;
+
+  // set scrollbar width for different engines
+}
