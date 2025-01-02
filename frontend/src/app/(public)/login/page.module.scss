@@ -10,10 +10,10 @@
   max-width: 30vw;
   width: 30%;
   padding: 4rem 2.5rem;
-  border: 1px solid #2f2f2f;
+  border: 1px solid var(--colorBg);
   border-radius: 1.5rem;
   margin: auto;
-  background-color: #171717;
+  background-color: var(--borderColor);
 
   > .header {
     line-height: 1.7;
@@ -21,16 +21,16 @@
   }
 
   > .header > .lead {
-    color: #878787;
+    color: var(--colorGrey3);
   }
 
   > .footer {
     margin-top: 1.5rem;
-    color: #878787;
+    color: var(--colorGrey3);
   }
 
   > .footer > .signupLink {
-    color: #21ac21;
+    color: var(--colorGreenDark);
     font-weight: 800;
   }
 }
