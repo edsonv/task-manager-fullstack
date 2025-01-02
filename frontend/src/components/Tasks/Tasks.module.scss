@@ -1,7 +1,7 @@
 .tasksContainer {
   width: 100%;
-  background-color: #212121;
-  border: 2px solid rgba(249, 249, 249, 0.08);
+  background-color: var(--colorBg2);
+  border: 2px solid var(--borderColor);
   border-radius: 1rem;
   padding: 2rem;
   overflow-y: auto;

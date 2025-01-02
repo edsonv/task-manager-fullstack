@@ -1,8 +1,6 @@
 .main {
   grid-column: 1 / span 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  align-content: center;
 }
 
 .loginForm {
@@ -12,15 +10,27 @@
   max-width: 30vw;
   width: 30%;
   padding: 4rem 2.5rem;
-  border: 1px solid red;
+  border: 1px solid #2f2f2f;
   border-radius: 1.5rem;
+  margin: auto;
+  background-color: #171717;
 
   > .header {
     line-height: 1.7;
     margin-bottom: 1.5rem;
   }
 
+  > .header > .lead {
+    color: #878787;
+  }
+
   > .footer {
     margin-top: 1.5rem;
+    color: #878787;
+  }
+
+  > .footer > .signupLink {
+    color: #21ac21;
+    font-weight: 800;
   }
 }

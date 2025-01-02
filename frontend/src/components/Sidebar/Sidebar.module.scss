@@ -1,7 +1,7 @@
 .sidebar {
   position: relative;
-  background-color: #212121;
-  border: 2px solid rgba(249, 249, 249, 0.08);
+  background-color: var(--colorBg2);
+  border: 2px solid var(--borderColor2);
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
     border-radius: 1rem;
     cursor: pointer;
     font-weight: 500;
-    color: #f8f8f8;
+    color: var(--colorTextLight);
     display: flex;
     align-items: center;
   }
@@ -22,7 +22,7 @@
   > .profile:hover {
     > .profileOverlay {
       opacity: 1;
-      border: 2px solid rgba(249, 249, 249, 0.08);
+      border: 2px solid var(--activeNavLink);
     }
 
     .userImage {
@@ -38,10 +38,10 @@
     height: 100%;
     backdrop-filter: blur(10px);
     z-index: 0;
-    background: #181818;
+    background: var(--colorBg3);
     transition: all 0.55s linear;
     border-radius: 1rem;
-    border: 2px solid rgba(249, 249, 249, 0.08);
+    border: 2px solid var(--activeNavLink);
     opacity: 0.2;
   }
 
@@ -89,7 +89,7 @@
       left: 0;
       width: 0;
       height: 100%;
-      background-color: rgba(249, 249, 249, 0.03);
+      background-color: var(--activeNavLinkHover);
       transition: all 0.3s ease-in-out;
     }
 
@@ -100,7 +100,7 @@
       top: 0;
       width: 0%;
       height: 100%;
-      background-color: #27ae60;
+      background-color: var(--colorGreenDark);
       border-bottom-left-radius: 5px;
       border-top-left-radius: 5px;
     }
@@ -119,7 +119,7 @@
 
     > .navLink,
     > .navIcon {
-      color: rgba(249, 249, 249, 0.35);
+      color: var(--colorIcons);
     }
 
     &:hover {
@@ -129,12 +129,12 @@
     }
 
     &.active {
-      background-color: rgba(249, 249, 249, 0.08);
+      background-color: var(--activeNavLink);
     }
 
     &.active > .navIcon,
     &.active > .navLink {
-      color: rgba(249, 249, 249, 0.75);
+      color: var(--colorIcons2);
     }
 
     &.active::before {
