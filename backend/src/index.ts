@@ -4,7 +4,7 @@ import express from 'express';
 import { createServer } from 'http';
 import { typeDefs } from './graphql/typeDefs';
 import { resolvers } from './graphql/resolvers';
-import dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
 
 dotenv.config();
 
@@ -15,7 +15,7 @@ const server = new ApolloServer({ typeDefs, resolvers });
 
 const { url } = await startStandaloneServer(server, {
   listen: {
-    port: process.env.PORT || 4000,
+    port: process.env.PORT,
   },
 });
 
