@@ -8,10 +8,10 @@ const taskSchema = new mongoose.Schema({
   isImportant: Boolean,
   createdAt: String,
   updatedAt: String,
-  // userId: {
-  //   type: Schema.Types.ObjectId,
-  //   ref: 'User',
-  // },
+  userId: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+  },
 });
 
 export const Task = model('Task', taskSchema);

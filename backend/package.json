@@ -14,12 +14,16 @@
   "type": "module",
   "dependencies": {
     "@apollo/server": "^4.11.2",
+    "bcryptjs": "^2.4.3",
     "express": "^4.21.2",
     "graphql": "^16.10.0",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.3"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.7",
     "@types/node": "^22.10.3",
     "dotenv": "^16.4.7",
     "nodemon": "^3.1.9",

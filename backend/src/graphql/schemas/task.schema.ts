@@ -13,4 +13,7 @@ export const taskSchema = `#graphql
   type Query {
     getTasks: [Task]
   }
+  type Mutation {
+    createTask(title: String!, description: String, date: String!, isCompleted: Boolean!, isImportant: Boolean!): Task!
+  }
 `;
